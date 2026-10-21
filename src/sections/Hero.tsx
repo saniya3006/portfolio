@@ -55,7 +55,9 @@ export function Hero() {
             >
               Hi, I'm {profile.firstName}.
               <br />
-              <span className="text-gradient animate-gradient-x italic">I build with data &amp; AI.</span>
+              <span className="text-gradient animate-gradient-x italic">
+                I build with data <span className="not-italic">&amp;</span>&nbsp;AI.
+              </span>
             </motion.h1>
 
             <motion.div
