@@ -21,7 +21,7 @@ export function Contact() {
         <Reveal className="mx-auto max-w-3xl text-center">
           <p className="font-mono text-xs uppercase tracking-[0.2em] text-primary">06 — Contact</p>
           <h2 className="mt-4 font-display text-4xl font-semibold tracking-tight sm:text-6xl">
-            Let's build <span className="text-gradient italic">something</span> together.
+            Let's build <span className="text-gradient">something</span> together.
           </h2>
           <p className="mx-auto mt-5 max-w-xl text-lg text-muted-foreground">
             I'm open to AI/ML, data and software engineering opportunities. The fastest way to reach me is by email.

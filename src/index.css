@@ -80,11 +80,6 @@
   .text-gradient {
     @apply bg-gradient-to-r from-indigo-500 via-violet-500 to-fuchsia-500 bg-clip-text text-transparent dark:from-indigo-300 dark:via-violet-300 dark:to-fuchsia-300;
     background-size: 200% auto;
-    /* Italic glyphs overhang their box and bg-clip-text would cut them off. */
-    padding-right: 0.15em;
-    margin-right: -0.05em;
-    -webkit-box-decoration-break: clone;
-    box-decoration-break: clone;
   }
 
   .card-surface {
