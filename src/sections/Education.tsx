@@ -6,11 +6,11 @@ import { certifications, education } from "@/lib/data";
 
 export function Education() {
   return (
-    <section id="education" className="border-t py-24 sm:py-32">
+    <section id="education" className="border-t py-16 sm:py-24 lg:py-32">
       <div className="container">
         <SectionHeading index="05" eyebrow="Education" title="Education & certifications" />
 
-        <div className="grid gap-6 lg:grid-cols-2">
+        <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
           <div className="space-y-4">
             {education.map((e, i) => (
               <Reveal key={e.degree} delay={i * 0.08}>

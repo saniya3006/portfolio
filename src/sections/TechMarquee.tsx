@@ -4,7 +4,7 @@ export function TechMarquee() {
   const items = [...techMarquee, ...techMarquee];
 
   return (
-    <div className="marquee-mask border-y bg-card/40 py-5" aria-label="Technologies I use">
+    <div className="marquee-mask overflow-hidden border-y bg-card/40 py-5" aria-label="Technologies I use">
       <div className="flex w-max animate-marquee gap-10 hover:[animation-play-state:paused]">
         {items.map((tech, i) => (
           <span

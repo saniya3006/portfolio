@@ -28,13 +28,13 @@ export function Hero() {
   const role = useTypewriter(profile.roles);
 
   return (
-    <section id="top" className="relative overflow-hidden pb-20 pt-32 sm:pt-40">
+    <section id="top" className="relative overflow-hidden pb-12 pt-28 sm:pb-20 sm:pt-40">
       <div className="bg-grid absolute inset-0 -z-10" />
       <div className="blob -z-10 left-[-10%] top-10 size-[420px] bg-indigo-500" />
       <div className="blob -z-10 right-[-8%] top-40 size-[380px] bg-fuchsia-500" />
 
       <div className="container">
-        <div className="grid items-center gap-14 lg:grid-cols-[1.35fr_1fr]">
+        <div className="grid grid-cols-1 items-center gap-14 lg:grid-cols-[1.35fr_1fr]">
           <div>
             <motion.div variants={fadeUp} initial="hidden" animate="show" custom={0}>
               <span className="inline-flex items-center gap-2 rounded-full border bg-card/70 px-3.5 py-1.5 text-xs text-muted-foreground backdrop-blur sm:text-sm">
@@ -129,16 +129,16 @@ export function Hero() {
               </pre>
             </div>
 
-            <div className="card-surface absolute -left-4 -top-5 flex animate-float items-center gap-2 rounded-full px-3 py-2 text-xs font-medium shadow-lg sm:-left-8">
+            <div className="card-surface absolute -top-5 left-2 flex animate-float items-center gap-2 rounded-full px-3 py-2 text-xs font-medium shadow-lg sm:-left-8">
               <Brain className="size-4 text-primary" /> AI Intern @ Tech Mahindra
             </div>
             <div
-              className="card-surface absolute -bottom-5 -right-2 flex animate-float items-center gap-2 rounded-full px-3 py-2 text-xs font-medium shadow-lg sm:-right-6"
+              className="card-surface absolute -bottom-5 right-2 flex animate-float items-center gap-2 rounded-full px-3 py-2 text-xs font-medium shadow-lg sm:-right-6"
               style={{ animationDelay: "-3s" }}
             >
               <MapPin className="size-4 text-primary" /> Pune, India
             </div>
-            <Sparkles className="absolute -right-3 top-8 size-6 animate-pulse text-fuchsia-400" />
+            <Sparkles className="absolute right-1 top-8 size-6 animate-pulse sm:-right-3 text-fuchsia-400" />
           </motion.div>
         </div>
 
@@ -146,7 +146,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.7, duration: 0.6 }}
-          className="mt-20 grid grid-cols-2 gap-px overflow-hidden rounded-lg border bg-border md:grid-cols-4"
+          className="mt-14 grid grid-cols-2 gap-px sm:mt-20 overflow-hidden rounded-lg border bg-border md:grid-cols-4"
         >
           {stats.map((s) => (
             <Stat key={s.label} {...s} />
@@ -155,7 +155,7 @@ export function Hero() {
 
         <a
           href="#about"
-          className="mx-auto mt-14 flex w-fit flex-col items-center gap-2 text-xs text-muted-foreground transition-colors hover:text-foreground"
+          className="mx-auto mt-14 hidden w-fit flex-col items-center gap-2 text-xs sm:flex text-muted-foreground transition-colors hover:text-foreground"
         >
           Scroll to explore
           <ArrowDown className="size-4 animate-bounce" />

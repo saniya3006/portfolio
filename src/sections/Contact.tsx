@@ -15,7 +15,7 @@ export function Contact() {
   const { copied, copy } = useCopyToClipboard();
 
   return (
-    <section id="contact" className="relative overflow-hidden border-t py-24 sm:py-32">
+    <section id="contact" className="relative overflow-hidden border-t py-16 sm:py-24 lg:py-32">
       <div className="blob -z-10 left-1/2 top-1/2 size-[500px] -translate-x-1/2 -translate-y-1/2 bg-violet-500" />
       <div className="container">
         <Reveal className="mx-auto max-w-3xl text-center">
@@ -41,20 +41,22 @@ export function Contact() {
           </p>
         </Reveal>
 
-        <div className="mx-auto mt-14 grid max-w-3xl gap-4 sm:grid-cols-3">
+        <div className="mx-auto mt-10 grid max-w-3xl grid-cols-1 gap-3 sm:mt-14 sm:grid-cols-3 sm:gap-4">
           {channels.map(({ label, value, href, Icon }, i) => (
             <Reveal key={label} delay={i * 0.08}>
               <a
                 href={href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="card-surface group flex h-full flex-col items-center gap-3 p-6 text-center transition-all hover:-translate-y-1 hover:border-primary/50"
+                className="card-surface group flex h-full items-center gap-4 p-4 text-left transition-all sm:flex-col sm:gap-3 sm:p-6 sm:text-center hover:-translate-y-1 hover:border-primary/50"
               >
-                <span className="grid size-12 place-items-center rounded-full bg-accent text-accent-foreground transition-transform group-hover:scale-110">
+                <span className="grid size-12 shrink-0 place-items-center rounded-full bg-accent text-accent-foreground transition-transform group-hover:scale-110">
                   <Icon className="size-5" />
                 </span>
-                <span className="font-semibold">{label}</span>
-                <span className="text-sm text-muted-foreground">{value}</span>
+                <span className="flex min-w-0 flex-col gap-0.5 sm:gap-2">
+                  <span className="font-semibold">{label}</span>
+                  <span className="text-sm text-muted-foreground">{value}</span>
+                </span>
               </a>
             </Reveal>
           ))}

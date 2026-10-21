@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { createPortal } from "react-dom";
 import { AnimatePresence, motion } from "framer-motion";
 import { ArrowUpRight, ExternalLink, Maximize2, X } from "lucide-react";
 import { GithubIcon } from "@/components/ui/brand-icons";
@@ -10,14 +11,14 @@ import { cn } from "@/lib/utils";
 
 function ProjectLinks({ project }: { project: Project }) {
   return (
-    <div className="flex flex-wrap gap-4 text-sm font-medium">
+    <div className="flex flex-wrap gap-x-4 text-sm font-medium">
       {project.demo && (
-        <a href={project.demo} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 text-primary hover:underline">
+        <a href={project.demo} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 py-2.5 text-primary hover:underline">
           <ExternalLink className="size-4" /> Live demo
         </a>
       )}
       {project.repo && (
-        <a href={project.repo} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 text-primary hover:underline">
+        <a href={project.repo} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 py-2.5 text-primary hover:underline">
           <GithubIcon className="size-4" /> Code
         </a>
       )}
@@ -103,7 +104,7 @@ export function Projects() {
   const visible = filter === "all" ? projects : projects.filter((p) => p.categories.includes(filter));
 
   return (
-    <section id="projects" className="border-t py-24 sm:py-32">
+    <section id="projects" className="border-t py-16 sm:py-24 lg:py-32">
       <div className="container">
         <SectionHeading
           index="03"
@@ -138,7 +139,7 @@ export function Projects() {
           })}
         </div>
 
-        <motion.div layout className="grid gap-5 md:grid-cols-2">
+        <motion.div layout className="grid grid-cols-1 gap-5 md:grid-cols-2">
           <AnimatePresence mode="popLayout">
             {visible.map((project) => (
               <motion.div
@@ -182,11 +183,11 @@ export function Projects() {
                       </span>
                     ))}
                   </div>
-                  <div className="mt-5 flex items-center justify-between gap-3 border-t pt-4" onClick={(e) => e.stopPropagation()}>
+                  <div className="mt-4 flex items-center justify-between gap-3 border-t pt-2" onClick={(e) => e.stopPropagation()}>
                     <ProjectLinks project={project} />
                     <button
                       onClick={() => setSelected(project)}
-                      className="ml-auto inline-flex items-center gap-1.5 text-xs text-muted-foreground hover:text-foreground"
+                      className="ml-auto inline-flex items-center gap-1.5 py-2.5 pl-2 text-xs text-muted-foreground hover:text-foreground"
                     >
                       <Maximize2 className="size-3.5" /> Details
                     </button>
@@ -204,7 +205,10 @@ export function Projects() {
         </div>
       </div>
 
-      <AnimatePresence>{selected && <ProjectModal project={selected} onClose={() => setSelected(null)} />}</AnimatePresence>
+      {createPortal(
+        <AnimatePresence>{selected && <ProjectModal project={selected} onClose={() => setSelected(null)} />}</AnimatePresence>,
+        document.body,
+      )}
     </section>
   );
 }
