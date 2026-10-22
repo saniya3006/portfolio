@@ -13,7 +13,7 @@ Where the portfolio content came from, and what still needs attention.
 
 ## Links
 
-- Résumé: https://drive.google.com/file/d/1g0eHfTq3AVewOQk4WEXWM71mmJchGZBf/view
+- Résumé: https://drive.google.com/file/d/19FMwDF0qVl0mFUpQXqolvbH4d679nzzV/view
 - GitHub: https://github.com/saniya3006
 - LinkedIn: https://www.linkedin.com/in/saniya-s-mehta-2001b6389/
 - Email: saniyameh30@gmail.com
