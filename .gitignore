@@ -20,5 +20,6 @@ dist-ssr
 # Source screenshots (contain browser/private info)
 Screenshot*.png
 
-# Original resume (a copy is served from public/)
+# Original resumes (the latest copy is served from public/)
 /SANIYA_MEHTA.pdf
+/SANIYA_MEHTA_FlowCV_Resume_*.pdf

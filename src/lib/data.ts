@@ -8,7 +8,7 @@ export const profile = {
   email: import.meta.env.VITE_CONTACT_EMAIL ?? "saniyameh30@gmail.com",
   resumeUrl:
     import.meta.env.VITE_RESUME_URL ??
-    "https://drive.google.com/file/d/1gZ7WZphaL391djGchmsI3dqEQazcbIgm/view",
+    "https://drive.google.com/file/d/1g0eHfTq3AVewOQk4WEXWM71mmJchGZBf/view",
   resumePdf: "/Saniya_Mehta_Resume.pdf",
   github: "https://github.com/saniya3006",
   linkedin: "https://www.linkedin.com/in/saniya-s-mehta-2001b6389/",
